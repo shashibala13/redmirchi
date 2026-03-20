@@ -258,7 +258,7 @@ function CatalogueContact() {
         {[
           { icon:"📞", title:"Call for Info", lines:["Helpline: +91-7206317456","Help Desk: +91-9812541200"], href:"tel:+917206317456" },
           { icon:"✉️", title:"Email", lines:["info@redmirchi.org","Response within 24hrs"], href:"mailto:info@redmirchi.org" },
-          { icon:"🌐", title:"Website", lines:["redmirchiflowerbulbs.in","www.redmirchi.org"], href:"https://www.redmirchi.org" },
+          { icon:"🌐", title:"Website", lines:["redmirchiflowerbulbs.com","www.redmirchi.org"], href:"https://www.redmirchi.org" },
         ].map((c) => (
           <Link key={c.title} href={c.href}
             className="bg-white/8 border border-white/14 rounded-2xl p-6 text-center hover:bg-white/13 hover:-translate-y-1 transition-all duration-300">
