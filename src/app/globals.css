@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --magenta: #b0257e;
+  --magenta-light: #d4409e;
+  --magenta-deep: #7a1558;
+  --magenta-pale: #fce4f5;
+  --green: #2d7a3a;
+  --green-pale: #e8f7ec;
+  --gold: #e8a020;
+  --gold-light: #f5c842;
+  --cream: #fdf8f2;
+  --cream-dark: #f2ede4;
+  --ink: #12100e;
+  --earth: #3d2b1f;
+}
+
+html { scroll-behavior: smooth; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--magenta); border-radius: 3px; }
+
+/* ── Reveal animations ── */
+.reveal,
+.reveal-left,
+.reveal-right {
+  opacity: 0;
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal { transform: translateY(24px); }
+.reveal-left { transform: translateX(-24px); }
+.reveal-right { transform: translateX(24px); }
+.reveal.visible,
+.reveal-left.visible,
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* ── Form inputs ── */
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl border border-[rgba(176,37,126,0.18)] bg-cream
+    text-ink font-sans text-sm transition-all duration-200 outline-none
+    focus:border-magenta focus:bg-white focus:ring-2 focus:ring-[rgba(176,37,126,0.1)]
+    placeholder:text-[#7a6f65] disabled:opacity-60 disabled:cursor-not-allowed;
+}
+.form-input-error { @apply border-red-400 bg-red-50; }
+.form-input-valid { @apply border-green; }
+
+/* ── Chip / radio labels ── */
+.chip-label {
+  @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full cursor-pointer text-sm font-semibold
+    border border-[rgba(176,37,126,0.2)] bg-cream text-[#4a3f35]
+    transition-all duration-200 select-none
+    hover:border-magenta hover:text-magenta hover:bg-[rgba(176,37,126,0.05)];
+}
+.chip-checked {
+  @apply bg-magenta text-white border-magenta shadow-md;
+}
+
+/* ── Buttons ── */
+.btn-magenta {
+  @apply inline-flex items-center justify-center gap-2
+    bg-gradient-to-br from-magenta to-magenta-deep
+    text-white font-bold text-sm rounded-full px-8 py-3.5
+    shadow-[0_6px_28px_rgba(176,37,126,0.4)]
+    transition-all duration-200
+    hover:-translate-y-0.5 hover:shadow-[0_10px_36px_rgba(176,37,126,0.5)]
+    active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed;
+}
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2
+    bg-transparent border border-magenta text-magenta font-semibold
+    text-sm rounded-full px-6 py-3
+    transition-all duration-200
+    hover:bg-magenta hover:text-white;
+}
+
+/* ── Section tags ── */
+.section-tag {
+  @apply inline-flex items-center gap-2 text-magenta font-bold text-[11px] tracking-[0.1em] uppercase mb-2;
+}
+.section-tag::before, .section-tag::after { content: '—'; opacity: 0.45; }
+
+.section-title-serif {
+  @apply font-cormorant text-[clamp(2rem,4vw,3.2rem)] font-bold leading-[1.1] text-ink;
+}
+
+/* ── Flower card ── */
+.flower-card {
+  @apply rounded-[18px] overflow-hidden bg-white
+    border border-[rgba(176,37,126,0.08)]
+    transition-all duration-300
+    hover:-translate-y-1.5 hover:shadow-magenta hover:border-[rgba(176,37,126,0.28)]
+    shadow-[0_2px_14px_rgba(0,0,0,0.05)];
+}
+.flower-card-img {
+  @apply aspect-square flex items-center justify-center text-5xl relative overflow-hidden;
+}
+
+/* ── Select arrow ── */
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b0257e' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem !important;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* ── Keyframes ── */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+.success-anim { animation: scaleIn 0.4s ease forwards; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
