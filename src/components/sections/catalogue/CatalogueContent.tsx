@@ -120,7 +120,7 @@ export default function CatalogueContent() {
             🇳🇱 Product of Holland · Premium Bulb Collection
           </div>
           <h1 className="font-cormorant font-bold text-white text-[clamp(2.5rem,6vw,4.5rem)] leading-[1.05] mb-3">
-            Premium Flower Bulb<br /><em className="text-gold-light">Catalogue 2024</em>
+            Premium Flower Bulb<br /><em className="text-gold-light">Catalogue 2026</em>
           </h1>
           <p className="text-white/75 text-[14px] leading-relaxed mb-6 max-w-xl mx-auto">
             India&apos;s leading importer and distributor of Holland-certified flower bulbs. Explore our complete range across 15+ varieties.

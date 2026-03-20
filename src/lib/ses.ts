@@ -152,7 +152,7 @@ function buildConfirmHtml(data: ContactFormData, refId: string): string {
     </table>
   </td></tr>
   <tr><td style="background:#0d0b09;padding:16px 36px;text-align:center;color:rgba(255,255,255,0.3);font-size:11px;line-height:1.65;">
-    &copy; 2024 Red Mirchi Associates &bull; A-4, Palika Bazaar, Jind, Haryana 126102<br>
+    &copy; 2026 Red Mirchi Associates &bull; A-4, Palika Bazaar, Jind, Haryana 126102<br>
     If you did not submit this form, please ignore this email.
   </td></tr>
 </table>
