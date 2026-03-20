@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="max-w-[1280px] mx-auto px-[5vw] py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div className="md:col-span-2">
-          <div className="relative h-10 w-40 mb-4 opacity-70">
-            <Image src="/logo-redmirchi.png" alt="Red Mirchi" fill className="object-contain object-left brightness-0 invert" />
+          <div className="relative h-16 w-52 mb-4">
+            <Image src="/logo-redmirchi.png" alt="Red Mirchi Associates" fill className="object-contain object-left" />
           </div>
           <p className="text-[13px] leading-relaxed max-w-xs">
             {COMPANY.tagline}. Empowering India&apos;s farmers since 2009 with premium agro-horti solutions from Jind, Haryana.
@@ -18,7 +18,6 @@ export default function Footer() {
             {[
               { emoji: "📘", label: "Facebook", href: "https://www.facebook.com/share/1AQr8W8nK7/?mibextid=wwXIfr" },
               { emoji: "📸", label: "Instagram", href: "https://www.instagram.com/redmirchi_associates?igsh=MW5ibjB6NHU3OGx0eA==" },
-             
               { emoji: "💬", label: "WhatsApp", href: `https://wa.me/${COMPANY.phone.replace(/\D/g, "")}` },
             ].map((s) => (
               <Link key={s.label} href={s.href} target="_blank" rel="noreferrer"

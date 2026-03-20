@@ -1,5 +1,5 @@
 # 🌸 Red Mirchi Associates — Complete Next.js Website
-1
+
 A full-stack **Next.js 14** corporate website for Red Mirchi Associates, India's leading agro-horti floriculture solution provider. Converted from 7 standalone HTML pages into a unified, production-ready Next.js application with **AWS SES** email integration.
 
 ---
