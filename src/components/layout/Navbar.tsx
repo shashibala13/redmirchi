@@ -28,7 +28,7 @@ export default function Navbar() {
 
       {/* Logo */}
       <Link href="/" className="flex items-center gap-2.5">
-        <div className="relative h-36 w-48">
+        <div className="relative h-20 w-48">
           <Image src="/logo-redmirchi.png" alt="Red Mirchi Associates" fill className="object-contain object-left" priority />
         </div>
       </Link>
