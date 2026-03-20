@@ -71,7 +71,7 @@ export default function HomeHero() {
             style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
             <div className="relative aspect-square w-full bg-gradient-to-br from-yellow-100 to-amber-50">
               <Image
-                src="/images/1-h.JPG"
+                src="/images/1-h.jpg"
                 alt="Asiatic Lily — Red Mirchi Associates"
                 fill
                 className="object-cover"
@@ -90,7 +90,7 @@ export default function HomeHero() {
             style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
             <div className="relative aspect-square w-full bg-gradient-to-br from-yellow-100 to-amber-50">
               <Image
-                src="/images/hero-asiatic-lily.JPG"
+                src="/images/hero-asiatic-lily.jpg"
                 alt="Asiatic Lily — Red Mirchi Associates"
                 fill
                 className="object-cover"
@@ -109,7 +109,7 @@ export default function HomeHero() {
             style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
             <div className="relative aspect-square w-full bg-gradient-to-br from-green-100 to-emerald-50">
               <Image
-                src="/images/2-1.JPG"
+                src="/images/2-1.jpg"
                 alt="Polyhouse Facility — Red Mirchi Associates"
                 fill
                 className="object-cover"

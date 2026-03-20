@@ -54,7 +54,7 @@ export default function AboutHero() {
         {/* Image area */}
         <div className="relative bg-gradient-to-br from-magenta-pale to-orange-50 border-b border-magenta/10 overflow-hidden min-h-[280px]">
           <Image
-            src="/images/about-hero.JPG"
+            src="/images/about-hero.jpg"
             alt="Red Mirchi Associates — Horticulture & Floriculture"
             fill
             className="object-cover"

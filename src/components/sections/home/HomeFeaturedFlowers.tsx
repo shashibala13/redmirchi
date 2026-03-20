@@ -23,7 +23,7 @@ const featured = [
     emoji: "🌺",
     bgGradient: "from-orange-100 to-orange-50",
     colorBarClass: "bg-gradient-to-r from-orange-400 to-orange-300",
-    image: "/images/flowers/orange-joy-pot-lily.JPG",
+    image: "/images/flowers/orange-joy-pot-lily.jpg",
     // Upload: public/images/flowers/orange-joy-pot-lily.jpg
   },
   {
@@ -32,7 +32,7 @@ const featured = [
     emoji: "🌷",
     bgGradient: "from-pink-100 to-rose-50",
     colorBarClass: "bg-gradient-to-r from-pink-400 to-rose-300",
-    image: "/images/flowers/brindisi-asiatic-lily.JPG",
+    image: "/images/flowers/brindisi-asiatic-lily.jpg",
     // Upload: public/images/flowers/brindisi-asiatic-lily.jpg
   },
   {
@@ -41,7 +41,7 @@ const featured = [
     emoji: "🌻",
     bgGradient: "from-yellow-100 to-amber-50",
     colorBarClass: "bg-gradient-to-r from-yellow-400 to-amber-300",
-    image: "/images/flowers/nashville-la-lily.JPG",
+    image: "/images/flowers/nashville-la-lily.jpg",
     // Upload: public/images/flowers/nashville-la-lily.jpg
   },
   {
@@ -50,7 +50,7 @@ const featured = [
     emoji: "🌸",
     bgGradient: "from-pink-100 to-fuchsia-50",
     colorBarClass: "bg-gradient-to-r from-fuchsia-400 to-pink-300",
-    image: "/images/flowers/labrador-oriental-lily.JPG",
+    image: "/images/flowers/labrador-oriental-lily.jpg",
     // Upload: public/images/flowers/labrador-oriental-lily.jpg
   }
 ];
