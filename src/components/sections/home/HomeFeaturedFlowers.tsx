@@ -4,15 +4,55 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import FlowerCard from "@/components/ui/FlowerCard";
 
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * HOW TO ADD IMAGES
+ * ─────────────────────────────────────────────────────────────────────────────
+ * 1. Upload your photos to:  public/images/flowers/
+ * 2. Set the `image` field below to match your filename, e.g.:
+ *      image: "/images/flowers/orange-joy-pot-lily.jpg"
+ * 3. Leave `image` as `undefined` (or remove the field) to show the emoji fallback.
+ *
+ * Recommended image size: 600×600px, square crop, JPG or WebP.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
 const featured = [
-  { name: "Orange Joy Pot Lily", type: "Pot Lily", emoji: "🌺", bgGradient: "from-orange-100 to-orange-50", colorBarClass: "bg-gradient-to-r from-orange-400 to-orange-300" },
-  { name: "Brindisi", type: "Asiatic Lily", emoji: "🌷", bgGradient: "from-pink-100 to-rose-50", colorBarClass: "bg-gradient-to-r from-pink-400 to-rose-300" },
-  { name: "Nashville", type: "LA Lily", emoji: "🌻", bgGradient: "from-yellow-100 to-amber-50", colorBarClass: "bg-gradient-to-r from-yellow-400 to-amber-300" },
-  { name: "Labrador", type: "Oriental Lily", emoji: "🌸", bgGradient: "from-pink-100 to-fuchsia-50", colorBarClass: "bg-gradient-to-r from-fuchsia-400 to-pink-300" },
-  { name: "Captain Fresco", type: "Calla Lily", emoji: "🤍", bgGradient: "from-slate-100 to-blue-50", colorBarClass: "bg-gradient-to-r from-slate-400 to-blue-300" },
-  { name: "Royal Virgin", type: "Tulip", emoji: "🌷", bgGradient: "from-purple-100 to-violet-50", colorBarClass: "bg-gradient-to-r from-purple-400 to-violet-300" },
-  { name: "Blue Pearl", type: "Hyacinthus", emoji: "💙", bgGradient: "from-blue-100 to-indigo-50", colorBarClass: "bg-gradient-to-r from-blue-400 to-indigo-300" },
-  { name: "Tricolour Mix", type: "Sparaxis", emoji: "🎨", bgGradient: "from-rose-100 to-yellow-50", colorBarClass: "bg-gradient-to-r from-rose-400 via-yellow-300 to-green-300" },
+  {
+    name: "Yellow Pomponette",
+    type: "Tulip",
+    emoji: "🌺",
+    bgGradient: "from-orange-100 to-orange-50",
+    colorBarClass: "bg-gradient-to-r from-orange-400 to-orange-300",
+    image: "/images/flowers/orange-joy-pot-lily.JPG",
+    // Upload: public/images/flowers/orange-joy-pot-lily.jpg
+  },
+  {
+    name: "Yellow",
+    type: "Asiatic Lily",
+    emoji: "🌷",
+    bgGradient: "from-pink-100 to-rose-50",
+    colorBarClass: "bg-gradient-to-r from-pink-400 to-rose-300",
+    image: "/images/flowers/brindisi-asiatic-lily.JPG",
+    // Upload: public/images/flowers/brindisi-asiatic-lily.jpg
+  },
+  {
+    name: "Verandi",
+    type: "Tulip",
+    emoji: "🌻",
+    bgGradient: "from-yellow-100 to-amber-50",
+    colorBarClass: "bg-gradient-to-r from-yellow-400 to-amber-300",
+    image: "/images/flowers/nashville-la-lily.JPG",
+    // Upload: public/images/flowers/nashville-la-lily.jpg
+  },
+  {
+    name: "Yelloween",
+    type: "Oriental Lily",
+    emoji: "🌸",
+    bgGradient: "from-pink-100 to-fuchsia-50",
+    colorBarClass: "bg-gradient-to-r from-fuchsia-400 to-pink-300",
+    image: "/images/flowers/labrador-oriental-lily.JPG",
+    // Upload: public/images/flowers/labrador-oriental-lily.jpg
+  }
 ];
 
 export default function HomeFeaturedFlowers() {

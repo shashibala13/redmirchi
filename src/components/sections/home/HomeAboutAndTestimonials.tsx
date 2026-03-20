@@ -50,7 +50,7 @@ export default function HomeAboutAndTestimonials() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Testimonials 
       <section className="py-20 px-[5vw] relative overflow-hidden"
         style={{ background: "linear-gradient(160deg, #2d7a3a 0%, #1a4d24 100%)" }}>
         <div className="absolute inset-0 opacity-20"
@@ -73,7 +73,7 @@ export default function HomeAboutAndTestimonials() {
             ))}
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* CTA */}
       <section className="py-20 px-[5vw] bg-cream-dark text-center">

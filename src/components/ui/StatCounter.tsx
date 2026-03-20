@@ -13,10 +13,10 @@ export default function StatCounter({ target, suffix = "", label, className = ""
   const { display, ref } = useCountUp(target, suffix);
   return (
     <div className={className}>
-      <span ref={ref} className={`block font-cormorant font-bold leading-none text-magenta ${numClass}`}>
+      <span ref={ref} className={`block font-cormorant font-bold leading-none ${numClass}`}>
         {display}
       </span>
-      <span className="text-[13px] text-[#7a6f65] font-medium mt-1 block">{label}</span>
+      <span className="text-[13px] text-[#ffffff] font-medium mt-1 block">{label}</span>
     </div>
   );
 }

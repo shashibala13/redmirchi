@@ -8,8 +8,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Catalogue", href: "/catalogue" },
-  { label: "Lilies", href: "/lilies" },
-  { label: "Media", href: "/media" },
+ /* { label: "Lilies", href: "/lilies" },*/
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -21,7 +20,7 @@ export const COMPANY = {
   phone2: "+91-9812541200",
   email: "info@redmirchi.org",
   website: "www.redmirchi.org",
-  website2: "redmirchiflowerbulbs.in",
+  website2: "redmirchiflowerbulbs.com",
   address: "A-4, Palika Bazaar, Jind, Haryana – 126102",
   city: "Jind, Haryana, India",
   established: "2009",
@@ -44,44 +43,47 @@ export interface FlowerVariety {
   colorClass: string;
   emoji: string;
   bgGradient: string;
+  /** Optional photo. Upload to public/images/catalogue/ and set path e.g. "/images/catalogue/orange-joy-pot-lily.JPG"
+   *  Emoji shows as fallback when image is not yet uploaded. */
+  image?: string;
 }
 
 export const POT_LILY_VARIETIES: FlowerVariety[] = [
-  { name: "Orange Joy Pot Lily", type: "Pot Lily", colorClass: "orange", emoji: "🌺", bgGradient: "from-orange-100 to-orange-50" },
-  { name: "Tiny Glow Yellow", type: "Pot Lily", colorClass: "yellow", emoji: "🌼", bgGradient: "from-yellow-100 to-yellow-50" },
-  { name: "Rozalynn Pink", type: "Pot Lily", colorClass: "pink", emoji: "🌸", bgGradient: "from-pink-100 to-pink-50" },
-  { name: "Century Joy", type: "Pot Lily", colorClass: "pink", emoji: "🌷", bgGradient: "from-pink-100 to-rose-50" },
-  { name: "Red Matrix", type: "Pot Lily", colorClass: "red", emoji: "🔴", bgGradient: "from-red-100 to-red-50" },
-  { name: "Golden Matrix", type: "Pot Lily", colorClass: "yellow", emoji: "💛", bgGradient: "from-amber-100 to-yellow-50" },
-  { name: "Orange Matrix", type: "Pot Lily", colorClass: "orange", emoji: "🟠", bgGradient: "from-orange-100 to-amber-50" },
-  { name: "White Romance", type: "Pot Lily", colorClass: "white", emoji: "🤍", bgGradient: "from-blue-50 to-slate-50" },
-  { name: "Trendy Dakota", type: "Pot Lily", colorClass: "pink", emoji: "💗", bgGradient: "from-fuchsia-100 to-pink-50" },
+  { name: "Orange Joy Pot Lily", type: "Pot Lily", colorClass: "orange", emoji: "🌺", bgGradient: "from-orange-100 to-orange-50", image: "/images/catalogue/orange-joy-pot-lily.JPG" },
+  { name: "Tiny Glow Yellow",    type: "Pot Lily", colorClass: "yellow", emoji: "🌼", bgGradient: "from-yellow-100 to-yellow-50", image: "/images/catalogue/tiny-glow-yellow-pot-lily.JPG" },
+  { name: "Rozalynn Pink",       type: "Pot Lily", colorClass: "pink",   emoji: "🌸", bgGradient: "from-pink-100 to-pink-50",   image: "/images/catalogue/rozalynn-pink-pot-lily.JPG" },
+  { name: "Century Joy",         type: "Pot Lily", colorClass: "pink",   emoji: "🌷", bgGradient: "from-pink-100 to-rose-50",   image: "/images/catalogue/century-joy-pot-lily.JPG" },
+  { name: "Red Matrix",          type: "Pot Lily", colorClass: "red",    emoji: "🔴", bgGradient: "from-red-100 to-red-50",     image: "/images/catalogue/red-matrix-pot-lily.JPG" },
+  { name: "Golden Matrix",       type: "Pot Lily", colorClass: "yellow", emoji: "💛", bgGradient: "from-amber-100 to-yellow-50", image: "/images/catalogue/golden-matrix-pot-lily.JPG" },
+  { name: "Orange Matrix",       type: "Pot Lily", colorClass: "orange", emoji: "🟠", bgGradient: "from-orange-100 to-amber-50", image: "/images/catalogue/orange-matrix-pot-lily.JPG" },
+  { name: "White Romance",       type: "Pot Lily", colorClass: "white",  emoji: "🤍", bgGradient: "from-blue-50 to-slate-50",   image: "/images/catalogue/white-romance-pot-lily.JPG" },
+  { name: "Trendy Dakota",       type: "Pot Lily", colorClass: "pink",   emoji: "💗", bgGradient: "from-fuchsia-100 to-pink-50", image: "/images/catalogue/trendy-dakota-pot-lily.JPG" },
 ];
 
 export const ASIATIC_VARIETIES: FlowerVariety[] = [
-  { name: "Brindisi", type: "Asiatic Lily", colorClass: "pink", emoji: "🌷", bgGradient: "from-pink-100 to-rose-50" },
-  { name: "Nashville", type: "LA Lily", colorClass: "yellow", emoji: "🌻", bgGradient: "from-yellow-100 to-amber-50" },
-  { name: "Black Charm", type: "LA Lily", colorClass: "dark", emoji: "🖤", bgGradient: "from-gray-200 to-gray-100" },
-  { name: "Yellow Diamond", type: "Asiatic Lily", colorClass: "yellow", emoji: "💛", bgGradient: "from-yellow-100 to-yellow-50" },
-  { name: "Eyeliner", type: "Asiatic Lily", colorClass: "white", emoji: "🤍", bgGradient: "from-slate-100 to-blue-50" },
-  { name: "Breakout", type: "LA Lily", colorClass: "red", emoji: "❤️", bgGradient: "from-red-100 to-red-50" },
-  { name: "Pavia", type: "Asiatic Lily", colorClass: "yellow", emoji: "🌟", bgGradient: "from-yellow-50 to-amber-50" },
-  { name: "Eremo", type: "LA Lily", colorClass: "orange", emoji: "🟠", bgGradient: "from-orange-100 to-orange-50" },
+  { name: "Brindisi",       type: "Asiatic Lily", colorClass: "pink",   emoji: "🌷", bgGradient: "from-pink-100 to-rose-50",   image: "/images/catalogue/brindisi-asiatic-lily.JPG" },
+  { name: "Nashville",      type: "LA Lily",      colorClass: "yellow", emoji: "🌻", bgGradient: "from-yellow-100 to-amber-50", image: "/images/catalogue/nashville-la-lily.JPG" },
+  { name: "Black Charm",    type: "LA Lily",      colorClass: "dark",   emoji: "🖤", bgGradient: "from-gray-200 to-gray-100",  image: "/images/catalogue/black-charm-la-lily.JPG" },
+  { name: "Yellow Diamond", type: "Asiatic Lily", colorClass: "yellow", emoji: "💛", bgGradient: "from-yellow-100 to-yellow-50", image: "/images/catalogue/yellow-diamond-asiatic-lily.JPG" },
+  { name: "Eyeliner",       type: "Asiatic Lily", colorClass: "white",  emoji: "🤍", bgGradient: "from-slate-100 to-blue-50",  image: "/images/catalogue/eyeliner-asiatic-lily.JPG" },
+  { name: "Breakout",       type: "LA Lily",      colorClass: "red",    emoji: "❤️", bgGradient: "from-red-100 to-red-50",     image: "/images/catalogue/breakout-la-lily.JPG" },
+  { name: "Pavia",          type: "Asiatic Lily", colorClass: "yellow", emoji: "🌟", bgGradient: "from-yellow-50 to-amber-50", image: "/images/catalogue/pavia-asiatic-lily.JPG" },
+  { name: "Eremo",          type: "LA Lily",      colorClass: "orange", emoji: "🟠", bgGradient: "from-orange-100 to-orange-50", image: "/images/catalogue/eremo-la-lily.jpg" },
 ];
 
 export const ORIENTAL_VARIETIES: FlowerVariety[] = [
-  { name: "Labrador", type: "Oriental Lily", colorClass: "pink", emoji: "🌸", bgGradient: "from-pink-100 to-rose-50" },
-  { name: "Yelloween", type: "OT Lily", colorClass: "yellow", emoji: "🌼", bgGradient: "from-yellow-100 to-amber-50" },
-  { name: "Profundo", type: "OT Lily", colorClass: "pink", emoji: "💗", bgGradient: "from-fuchsia-100 to-pink-50" },
-  { name: "Zambesi", type: "Oriental Lily", colorClass: "white", emoji: "🤍", bgGradient: "from-slate-100 to-blue-50" },
-  { name: "Robina", type: "Oriental Lily", colorClass: "pink", emoji: "🌺", bgGradient: "from-rose-100 to-pink-50" },
-  { name: "Tisento", type: "OT Lily", colorClass: "white", emoji: "⚪", bgGradient: "from-blue-50 to-slate-50" },
-  { name: "Red Desire", type: "Oriental Lily", colorClass: "red", emoji: "🌹", bgGradient: "from-red-100 to-rose-50" },
-  { name: "Santander", type: "OT Lily", colorClass: "white", emoji: "🌿", bgGradient: "from-green-50 to-slate-50" },
-  { name: "Bacardi", type: "Oriental Lily", colorClass: "red", emoji: "💝", bgGradient: "from-rose-100 to-red-50" },
-  { name: "Moscow", type: "OT Lily", colorClass: "white", emoji: "❄️", bgGradient: "from-blue-50 to-indigo-50" },
-  { name: "Tarrango", type: "Oriental Lily", colorClass: "pink", emoji: "🎀", bgGradient: "from-pink-100 to-fuchsia-50" },
-  { name: "Willke Alberty", type: "OT Lily", colorClass: "white", emoji: "🌷", bgGradient: "from-purple-50 to-pink-50" },
+  { name: "Labrador",       type: "Oriental Lily", colorClass: "pink",  emoji: "🌸", bgGradient: "from-pink-100 to-rose-50",   image: "/images/catalogue/labrador-oriental-lily.JPG" },
+  { name: "Yelloween",      type: "OT Lily",       colorClass: "yellow",emoji: "🌼", bgGradient: "from-yellow-100 to-amber-50", image: "/images/catalogue/yelloween-ot-lily.JPG" },
+  { name: "Profundo",       type: "OT Lily",       colorClass: "pink",  emoji: "💗", bgGradient: "from-fuchsia-100 to-pink-50", image: "/images/catalogue/profundo-ot-lily.JPG" },
+  { name: "Zambesi",        type: "Oriental Lily", colorClass: "white", emoji: "🤍", bgGradient: "from-slate-100 to-blue-50",  image: "/images/catalogue/zambesi-oriental-lily.JPG" },
+  { name: "Robina",         type: "Oriental Lily", colorClass: "pink",  emoji: "🌺", bgGradient: "from-rose-100 to-pink-50",   image: "/images/catalogue/robina-oriental-lily.JPG" },
+  { name: "Tisento",        type: "OT Lily",       colorClass: "white", emoji: "⚪", bgGradient: "from-blue-50 to-slate-50",   image: "/images/catalogue/tisento-ot-lily.JPG" },
+  { name: "Red Desire",     type: "Oriental Lily", colorClass: "red",   emoji: "🌹", bgGradient: "from-red-100 to-rose-50",    image: "/images/catalogue/red-desire-oriental-lily.JPG" },
+  { name: "Santander",      type: "OT Lily",       colorClass: "white", emoji: "🌿", bgGradient: "from-green-50 to-slate-50",  image: "/images/catalogue/santander-ot-lily.JPG" },
+  { name: "Bacardi",        type: "Oriental Lily", colorClass: "red",   emoji: "💝", bgGradient: "from-rose-100 to-red-50",    image: "/images/catalogue/bacardi-oriental-lily.JPG" },
+  { name: "Moscow",         type: "OT Lily",       colorClass: "white", emoji: "❄️", bgGradient: "from-blue-50 to-indigo-50",  image: "/images/catalogue/moscow-ot-lily.JPG" },
+  { name: "Tarrango",       type: "Oriental Lily", colorClass: "pink",  emoji: "🎀", bgGradient: "from-pink-100 to-fuchsia-50", image: "/images/catalogue/tarrango-oriental-lily.JPG" },
+  { name: "Willke Alberty", type: "OT Lily",       colorClass: "white", emoji: "🌷", bgGradient: "from-purple-50 to-pink-50",  image: "/images/catalogue/willke-alberty-ot-lily.JPG" },
 ];
 
 // ── Asiatic Lily Product Packs ────────────────────────────────────────────────

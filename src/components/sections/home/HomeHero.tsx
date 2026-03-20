@@ -63,25 +63,24 @@ export default function HomeHero() {
         <div className="grid grid-cols-2 gap-3 w-full max-w-[500px]">
 
           {/* Card 1 — Pot Lily (tall, spans both rows) */}
-          <div className="hfc row-span-2 rounded-2xl overflow-hidden border border-magenta/10
+         
+
+           <div className="hfc rounded-2xl overflow-hidden border border-magenta/10
             shadow-[0_8px_32px_rgba(176,37,126,0.1)] opacity-0 relative
             transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
             style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
-            <div className="relative min-h-[300px] w-full bg-gradient-to-br from-pink-100 to-rose-50">
+            <div className="relative aspect-square w-full bg-gradient-to-br from-yellow-100 to-amber-50">
               <Image
-                src="/images/hero-pot-lily.jpg"
-                alt="Pot Lily — Red Mirchi Associates"
+                src="/images/1-h.JPG"
+                alt="Asiatic Lily — Red Mirchi Associates"
                 fill
                 className="object-cover"
                 sizes="240px"
                 onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
               />
-              {/* Fallback shown when image not yet uploaded */}
-              <div className="absolute inset-0 flex items-center justify-center text-6xl pointer-events-none">🌺</div>
+              <div className="absolute inset-0 flex items-center justify-center text-6xl pointer-events-none">🌼</div>
             </div>
-            <div className="absolute bottom-2 left-2 right-2 bg-black/50 text-white text-[11px] font-bold px-2 py-1 rounded-lg text-center tracking-wider uppercase backdrop-blur-sm">
-              Pot Lily
-            </div>
+           
           </div>
 
           {/* Card 2 — Asiatic Lily (top right) */}
@@ -91,7 +90,7 @@ export default function HomeHero() {
             style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
             <div className="relative aspect-square w-full bg-gradient-to-br from-yellow-100 to-amber-50">
               <Image
-                src="/images/hero-asiatic-lily.jpg"
+                src="/images/hero-asiatic-lily.JPG"
                 alt="Asiatic Lily — Red Mirchi Associates"
                 fill
                 className="object-cover"
@@ -100,11 +99,27 @@ export default function HomeHero() {
               />
               <div className="absolute inset-0 flex items-center justify-center text-6xl pointer-events-none">🌼</div>
             </div>
-            <div className="absolute bottom-2 left-2 right-2 bg-black/50 text-white text-[11px] font-bold px-2 py-1 rounded-lg text-center tracking-wider uppercase backdrop-blur-sm">
-              Asiatic Lily
-            </div>
+           
+          
           </div>
-
+ {/* Card 4 — Polyhouse (bottom right) */}
+          <div className="hfc rounded-2xl overflow-hidden border border-magenta/10
+            shadow-[0_8px_32px_rgba(176,37,126,0.1)] opacity-0 relative
+            transition-transform duration-300 hover:-translate-y-1 cursor-pointer"
+            style={{ transition: "opacity 0.5s ease, transform 0.3s ease" }}>
+            <div className="relative aspect-square w-full bg-gradient-to-br from-green-100 to-emerald-50">
+              <Image
+                src="/images/2-1.JPG"
+                alt="Polyhouse Facility — Red Mirchi Associates"
+                fill
+                className="object-cover"
+                sizes="240px"
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+              <div className="absolute inset-0 flex items-center justify-center text-6xl pointer-events-none">🌿</div>
+            </div>
+           
+          </div>
           {/* Card 3 — Polyhouse (bottom right) */}
           <div className="hfc rounded-2xl overflow-hidden border border-magenta/10
             shadow-[0_8px_32px_rgba(176,37,126,0.1)] opacity-0 relative
@@ -121,10 +136,9 @@ export default function HomeHero() {
               />
               <div className="absolute inset-0 flex items-center justify-center text-6xl pointer-events-none">🌿</div>
             </div>
-            <div className="absolute bottom-2 left-2 right-2 bg-black/50 text-white text-[11px] font-bold px-2 py-1 rounded-lg text-center tracking-wider uppercase backdrop-blur-sm">
-              Polyhouse
-            </div>
+           
           </div>
+          
 
         </div>
       </div>

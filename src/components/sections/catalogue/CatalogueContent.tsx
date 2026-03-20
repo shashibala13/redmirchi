@@ -8,46 +8,57 @@ import StatCounter from "@/components/ui/StatCounter";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { FlowerVariety, POT_LILY_VARIETIES, ASIATIC_VARIETIES, ORIENTAL_VARIETIES } from "@/lib/constants";
 
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ * CATALOGUE IMAGES
+ * ─────────────────────────────────────────────────────────────────────────────
+ * Upload all flower photos to:  public/images/catalogue/
+ * Recommended size:             600 × 600 px  |  JPG or WebP  |  Square crop
+ * Emoji shows as fallback when image is not yet uploaded.
+ * Image paths for Pot Lily, Asiatic & Oriental are in src/lib/constants.ts
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
 const MORE_VARIETIES: Record<string, FlowerVariety[]> = {
   calla: [
-    { name:"Paco", type:"Calla Lily", emoji:"💜", bgGradient:"from-purple-100 to-violet-50", colorClass:"purple" },
-    { name:"Captain Fresco", type:"Calla Lily", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50", colorClass:"white" },
-    { name:"Carrera", type:"Calla Lily", emoji:"🖤", bgGradient:"from-gray-200 to-gray-100", colorClass:"dark" },
-    { name:"Captain Brunello", type:"Calla Lily", emoji:"🟠", bgGradient:"from-orange-100 to-orange-50", colorClass:"orange" },
-    { name:"Captain Solo", type:"Calla Lily", emoji:"💛", bgGradient:"from-yellow-100 to-yellow-50", colorClass:"yellow" },
-    { name:"Captain Hollywood", type:"Calla Lily", emoji:"🌸", bgGradient:"from-pink-100 to-rose-50", colorClass:"pink" },
+    { name:"Paco",              type:"Calla Lily", emoji:"💜", bgGradient:"from-purple-100 to-violet-50", colorClass:"purple", image:"/images/catalogue/paco-calla-lily.JPG" },
+    { name:"Captain Fresco",    type:"Calla Lily", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50",   colorClass:"white",  image:"/images/catalogue/captain-fresco-calla-lily.JPG" },
+    { name:"Carrera",           type:"Calla Lily", emoji:"🖤", bgGradient:"from-gray-200 to-gray-100",   colorClass:"dark",   image:"/images/catalogue/carrera-calla-lily.JPG" },
+    { name:"Captain Brunello",  type:"Calla Lily", emoji:"🟠", bgGradient:"from-orange-100 to-orange-50",colorClass:"orange", image:"/images/catalogue/captain-brunello-calla-lily.JPG" },
+    { name:"Captain Solo",      type:"Calla Lily", emoji:"💛", bgGradient:"from-yellow-100 to-yellow-50",colorClass:"yellow", image:"/images/catalogue/captain-solo-calla-lily.JPG" },
+    { name:"Captain Hollywood", type:"Calla Lily", emoji:"🌸", bgGradient:"from-pink-100 to-rose-50",    colorClass:"pink",   image:"/images/catalogue/captain-hollywood.JPG" },
   ],
   tulip: [
-    { name:"Lech Walesa", type:"Tulip", emoji:"🌷", bgGradient:"from-pink-100 to-rose-50", colorClass:"pink" },
-    { name:"Flaming Flag", type:"Tulip", emoji:"💜", bgGradient:"from-purple-100 to-violet-50", colorClass:"purple" },
-    { name:"Verandi", type:"Tulip", emoji:"❤️", bgGradient:"from-red-100 to-red-50", colorClass:"red" },
-    { name:"Dynasty", type:"Tulip", emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50", colorClass:"pink" },
-    { name:"Royal Virgin", type:"Tulip", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50", colorClass:"white" },
-    { name:"Queen of Night", type:"Tulip", emoji:"🖤", bgGradient:"from-gray-300 to-gray-200", colorClass:"dark" },
-    { name:"Yellow Pomponette", type:"Tulip", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow" },
-    { name:"Miranda", type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50", colorClass:"red" },
+    { name:"Lech Walesa",       type:"Tulip", emoji:"🌷", bgGradient:"from-pink-100 to-rose-50",    colorClass:"pink",   image:"/images/catalogue/lech-walesa-tulip.JPG" },
+    { name:"Flaming Flag",      type:"Tulip", emoji:"💜", bgGradient:"from-purple-100 to-violet-50",colorClass:"purple", image:"/images/catalogue/flaming-flag-tulip.JPG" },
+    { name:"Verandi",           type:"Tulip", emoji:"❤️", bgGradient:"from-red-100 to-red-50",      colorClass:"red",    image:"/images/catalogue/verandi-tulip.JPG" },
+    { name:"Dynasty",           type:"Tulip", emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50", colorClass:"pink",   image:"/images/catalogue/dynasty-tulip.jpg" },
+    { name:"Royal Virgin",      type:"Tulip", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50",   colorClass:"white",  image:"/images/catalogue/royal-virgin-tulip.JPG" },
+    { name:"Queen of Night",    type:"Tulip", emoji:"🖤", bgGradient:"from-gray-300 to-gray-200",   colorClass:"dark",   image:"/images/catalogue/queen-of-night-tulip.JPG" },
+    { name:"Yellow Pomponette", type:"Tulip", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow", image:"/images/catalogue/yellow-pomponette-tulip.JPG" },
+    { name:"Miranda",           type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50",     colorClass:"red",    image:"/images/catalogue/miranda-tulip.JPG" },
+    { name:"Fringed",           type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50",     colorClass:"red",    image:"/images/catalogue/fringed-tulip.JPG" },
+    { name:"Purple Lady",           type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50",     colorClass:"red",    image:"/images/catalogue/purple-lady-tulip.JPG" },
+      { name:"Trick",           type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50",     colorClass:"red",    image:"/images/catalogue/trick-tulip.JPG" },
+    { name:"Triumph Tulip",           type:"Tulip", emoji:"🔴", bgGradient:"from-red-100 to-rose-50",     colorClass:"red",    image:"/images/catalogue/triumph-tulip.JPG" },
   ],
   hyacinthus: [
-    { name:"Blue Pearl", type:"Hyacinthus", emoji:"💙", bgGradient:"from-blue-100 to-indigo-50", colorClass:"blue" },
-    { name:"Gipsy Queen", type:"Hyacinthus", emoji:"🟠", bgGradient:"from-orange-100 to-amber-50", colorClass:"orange" },
-    { name:"Jan Bos", type:"Hyacinthus", emoji:"❤️", bgGradient:"from-red-100 to-rose-50", colorClass:"red" },
-    { name:"Pink Pearl", type:"Hyacinthus", emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50", colorClass:"pink" },
-    { name:"White Pearl", type:"Hyacinthus", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50", colorClass:"white" },
-    { name:"Yellowstone", type:"Hyacinthus", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow" },
+    { name:"Blue Pearl",    type:"Hyacinthus", emoji:"💙", bgGradient:"from-blue-100 to-indigo-50",   colorClass:"blue",   image:"/images/catalogue/blue-pearl-hyacinthus.JPG" },
+    { name:"Gipsy Queen",   type:"Hyacinthus", emoji:"🟠", bgGradient:"from-orange-100 to-amber-50",  colorClass:"orange", image:"/images/catalogue/gipsy-queen-hyacinthus.JPG" },
+    { name:"Jan Bos",       type:"Hyacinthus", emoji:"❤️", bgGradient:"from-red-100 to-rose-50",      colorClass:"red",    image:"/images/catalogue/jan-bos-hyacinthus.JPG" },
+    { name:"Pink Pearl",    type:"Hyacinthus", emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50",  colorClass:"pink",   image:"/images/catalogue/pink-pearl-hyacinthus.JPG" },
+    { name:"White Pearl",   type:"Hyacinthus", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50",    colorClass:"white",  image:"/images/catalogue/white-pearl-hyacinthus.JPG" },
+    { name:"Yellowstone",   type:"Hyacinthus", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50",  colorClass:"yellow", image:"/images/catalogue/yellowstone-hyacinthus.JPG" },
   ],
   other: [
-    { name:"Picwick (Crocus)", type:"Crocus", emoji:"🟣", bgGradient:"from-purple-100 to-violet-50", colorClass:"purple" },
-    { name:"Flower Record (Crocus)", type:"Crocus", emoji:"💜", bgGradient:"from-violet-100 to-purple-50", colorClass:"purple" },
-    { name:"Muscari Armeniacum", type:"Muscari", emoji:"💙", bgGradient:"from-blue-100 to-indigo-50", colorClass:"blue" },
-    { name:"Siberian Tiger (Muscari)", type:"Muscari", emoji:"🤍", bgGradient:"from-slate-100 to-blue-50", colorClass:"white" },
-    { name:"Hollandica Strongold (Iris)", type:"Iris", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow" },
-    { name:"Barret Browning (Narcissus)", type:"Narcissus", emoji:"🤍", bgGradient:"from-slate-50 to-blue-50", colorClass:"white" },
-    { name:"Tahiti (Daffodil)", type:"Narcissus", emoji:"🌻", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow" },
-    { name:"Anemone Red", type:"Anemone", emoji:"🌺", bgGradient:"from-red-100 to-rose-50", colorClass:"red" },
-    { name:"Ranunculus Yellow", type:"Ranunculus", emoji:"💛", bgGradient:"from-yellow-100 to-amber-50", colorClass:"yellow" },
-    { name:"Ixia Venus", type:"Ixia", emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50", colorClass:"pink" },
-    { name:"Piony Red", type:"Piony", emoji:"🌹", bgGradient:"from-red-100 to-rose-50", colorClass:"red" },
-    { name:"Sparaxis Tricolour", type:"Sparaxis", emoji:"🎨", bgGradient:"from-rose-100 to-yellow-50", colorClass:"mixed" },
+    { name:"Freesia Orange",         type:"Freesia",      emoji:"🟣", bgGradient:"from-purple-100 to-violet-50",  colorClass:"purple", image:"/images/catalogue/freesia-orange.JPG" },
+    { name:"Ffreesia Purple",   type:"Freesia",      emoji:"💜", bgGradient:"from-violet-100 to-purple-50",  colorClass:"purple", image:"/images/catalogue/freesia-purple.JPG" },
+    { name:"Hollandica Tigereye (Iris)",type:"Iris",      emoji:"💛", bgGradient:"from-yellow-100 to-amber-50",   colorClass:"yellow", image:"/images/catalogue/hollandica-tigereye-iris.JPG" },
+    { name:"Hollandica Strongold (Iris)",type:"Iris",      emoji:"💛", bgGradient:"from-yellow-100 to-amber-50",   colorClass:"yellow", image:"/images/catalogue/hollandica-strongold-iris.JPG" },
+    { name:"Barret Browning (Narcissus)",type:"Narcissus", emoji:"🤍", bgGradient:"from-slate-50 to-blue-50",      colorClass:"white",  image:"/images/catalogue/barret-browning-narcissus.JPG" },
+    { name:"Tahiti (Daffodil)",        type:"Narcissus",   emoji:"🌻", bgGradient:"from-yellow-100 to-amber-50",   colorClass:"yellow", image:"/images/catalogue/tahiti-daffodil.JPG" },
+    { name:"Anemone Red",              type:"Anemone",     emoji:"🌺", bgGradient:"from-red-100 to-rose-50",       colorClass:"red",    image:"/images/catalogue/anemone-red.JPG" },
+    { name:"Ixia Giant",               type:"Ixia",        emoji:"🩷", bgGradient:"from-pink-100 to-fuchsia-50",   colorClass:"pink",   image:"/images/catalogue/ixia-giant.JPG" },
+ 
   ],
 };
 
@@ -101,7 +112,7 @@ export default function CatalogueContent() {
   return (
     <>
       {/* Hero */}
-      <section className="min-h-[60vh] flex items-center justify-center text-center pt-16 relative overflow-hidden"
+      <section className="min-h-[60vh] flex items-center justify-center text-center pt-20 relative overflow-hidden"
         style={{ background: "linear-gradient(160deg, #7a1558 0%, #b0257e 50%, #ce93d8 100%)" }}>
         <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.06) 1.5px, transparent 1.5px)", backgroundSize: "34px 34px" }} />
         <div className="relative z-10 px-[5vw] py-16 max-w-3xl mx-auto">
@@ -131,7 +142,7 @@ export default function CatalogueContent() {
       </section>
 
       {/* Sticky category nav */}
-      <div className="sticky top-16 z-[90] bg-white border-b border-magenta/10 shadow-sm overflow-x-auto scrollbar-none" ref={navRef}>
+      <div className="sticky top-20 z-[90] bg-white border-b border-magenta/10 shadow-sm overflow-x-auto scrollbar-none" ref={navRef}>
         <div className="flex px-[5vw] min-w-max">
           {navItems.map((item) => (
             <button key={item.id}
@@ -174,18 +185,14 @@ export default function CatalogueContent() {
         desc="Heralds of spring — announcing winter's end with vivid colors and sweet, lingering fragrance."
         varieties={MORE_VARIETIES.hyacinthus} className="bg-white" />
 
-      {/* More flowers */}
-      <section id="other-flowers" className="py-16 px-[5vw] bg-cream scroll-mt-[130px]">
-        <SectionHeader tag="More Varieties" title={<>More <em className="text-green not-italic">Flower</em> Collections</>}
-          desc="From delicate Crocus and fragrant Freesia to vibrant Muscari, Iris, Anemone, Ranunculus and more." />
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {MORE_VARIETIES.other.map((v, i) => (
-            <div key={v.name} className="reveal" style={{ transitionDelay: `${i * 40}ms` }}>
-              <FlowerCard {...v} />
-            </div>
-          ))}
-        </div>
-      </section>
+       {/* More flowers */}
+      <CategorySection
+        id="other-flowers"
+        title={<>More <em className="text-green not-italic">Flower</em> Collections</>}
+        desc="From delicate Crocus and fragrant Freesia to vibrant Muscari, Iris, Anemone, Ranunculus and more."
+        varieties={MORE_VARIETIES.other}
+        className="bg-cream"
+      />
 
       {/* What We Do */}
       <WhatWeDo />

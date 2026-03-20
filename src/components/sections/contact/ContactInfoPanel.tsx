@@ -81,9 +81,9 @@ export default function ContactInfoPanel() {
           <p className="text-[13px] text-[#7a6f65] mb-4 leading-relaxed">Stay updated with new varieties, growing tips, and offers.</p>
           <div className="flex flex-wrap gap-2">
             {[
-              { label:"Facebook", emoji:"📘", href:"#", color:"#1877f2" },
-              { label:"Instagram", emoji:"📸", href:"#", color:"#e1306c" },
-              { label:"YouTube", emoji:"▶️", href:"#", color:"#ff0000" },
+              { label:"Facebook", emoji:"📘", href:"https://www.facebook.com/share/1AQr8W8nK7/?mibextid=wwXIfr", color:"#1877f2" },
+              { label:"Instagram", emoji:"📸", href:"https://www.instagram.com/redmirchi_associates?igsh=MW5ibjB6NHU3OGx0eA==", color:"#e1306c" },
+              
               { label:"WhatsApp", emoji:"💬", href:`https://wa.me/${COMPANY.phone.replace(/\D/g,"")}`, color:"#25d366" },
             ].map(s => (
               <Link key={s.label} href={s.href} target="_blank" rel="noreferrer"

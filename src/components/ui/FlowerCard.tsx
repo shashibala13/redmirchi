@@ -1,3 +1,4 @@
+import Image from "next/image";
 import clsx from "clsx";
 
 interface Props {
@@ -8,15 +9,35 @@ interface Props {
   colorBarClass?: string;
   desc?: string;
   badge?: string;
+  /** Optional real photo. Upload to public/images/ and pass e.g. "/images/orange-joy-pot-lily.jpg"
+   *  If omitted or image fails to load, the emoji fallback is shown automatically. */
+  image?: string;
 }
 
-export default function FlowerCard({ name, type, emoji, bgGradient, colorBarClass, desc, badge }: Props) {
+export default function FlowerCard({ name, type, emoji, bgGradient, colorBarClass, desc, badge, image }: Props) {
   return (
     <div className="flower-card group">
-      <div className={clsx("flower-card-img bg-gradient-to-br", bgGradient)}>
-        <span className="text-5xl transition-transform duration-300 group-hover:scale-110">{emoji}</span>
+      <div className={clsx("flower-card-img bg-gradient-to-br relative overflow-hidden", bgGradient)}>
+        {/* Real photo — shown when image prop is provided */}
+        {image && (
+          <Image
+            src={image}
+            alt={`${name} — Red Mirchi Associates`}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+          />
+        )}
+        {/* Emoji fallback — always present underneath, visible when no image */}
+        <span className={clsx(
+          "text-5xl transition-transform duration-300 group-hover:scale-110 relative z-10",
+          image && "opacity-0 group-hover:opacity-0"
+        )}>
+          {emoji}
+        </span>
         {badge && (
-          <span className="absolute top-2 right-2 bg-magenta text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+          <span className="absolute top-2 right-2 bg-magenta text-white text-[10px] font-bold px-2 py-0.5 rounded-full z-20">
             {badge}
           </span>
         )}

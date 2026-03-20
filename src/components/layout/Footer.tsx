@@ -16,9 +16,9 @@ export default function Footer() {
           </p>
           <div className="flex gap-2 mt-4">
             {[
-              { emoji: "📘", label: "Facebook", href: "#" },
-              { emoji: "📸", label: "Instagram", href: "#" },
-              { emoji: "▶️", label: "YouTube", href: "#" },
+              { emoji: "📘", label: "Facebook", href: "https://www.facebook.com/share/1AQr8W8nK7/?mibextid=wwXIfr" },
+              { emoji: "📸", label: "Instagram", href: "https://www.instagram.com/redmirchi_associates?igsh=MW5ibjB6NHU3OGx0eA==" },
+             
               { emoji: "💬", label: "WhatsApp", href: `https://wa.me/${COMPANY.phone.replace(/\D/g, "")}` },
             ].map((s) => (
               <Link key={s.label} href={s.href} target="_blank" rel="noreferrer"

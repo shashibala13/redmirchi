@@ -8,44 +8,39 @@ export function AboutStory() {
   const ref = useScrollReveal();
   return (
     <section className="py-20 px-[7vw] bg-white relative overflow-hidden" ref={ref}>
+      {/* Decorative quote mark */}
       <div className="absolute top-[-4rem] left-[-2rem] text-[28rem] font-cormorant font-bold text-magenta/4 leading-none pointer-events-none select-none">&ldquo;</div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div className="reveal-left relative z-10">
+
+      <div className="max-w-3xl relative z-10">
+        {/* Header + paragraphs */}
+        <div className="reveal-left">
           <SectionHeader tag="Our Story" title={<>From a Seed of <em className="text-magenta not-italic">Passion</em></>} />
-          <p className="text-[14px] text-[#4a3f35] leading-relaxed mb-4">Established in 2009 in Jind, Haryana, Red Mirchi Associates began with a singular vision — to bridge the gap between world-class floriculture expertise and India&apos;s vast farming community.</p>
+          <p className="text-[14px] text-[#4a3f35] leading-relaxed mb-4">
+            Established in 2009 in Jind, Haryana, Red Mirchi Associates began with a singular vision — to bridge the gap between world-class floriculture expertise and India&apos;s vast farming community.
+          </p>
           <blockquote className="font-cormorant text-[1.35rem] font-semibold italic text-magenta-deep border-l-4 border-magenta pl-5 my-5 leading-relaxed">
-            &ldquo;To be the most preferred supplier in India as a Total Agro-Horti & Floriculture solution provider — improving soil health, crop production, and the quality of life of farmers.&rdquo;
+            &ldquo;To be the most preferred supplier in India as a Total Agro-Horti &amp; Floriculture solution provider — improving soil health, crop production, and the quality of life of farmers.&rdquo;
           </blockquote>
-          <p className="text-[14px] text-[#4a3f35] leading-relaxed">Our collaborations extend from the white hills of Lahaul Spiti to the green hilly landscapes of Ooty — and from Uttarakhand to the North East region, creating a network that transforms lives.</p>
+          <p className="text-[14px] text-[#4a3f35] leading-relaxed">
+            Our collaborations extend from the white hills of Lahaul Spiti to the green hilly landscapes of Ooty — and from Uttarakhand to the North East region, creating a network that transforms lives.
+          </p>
         </div>
-        <div className="reveal-right">
-          <div className="relative">
-            <div className="aspect-[3/4] rounded-sm bg-gradient-to-br from-magenta-pale to-orange-50 flex items-center justify-center text-[9rem] shadow-[16px_16px_0_#f2ede4,16px_16px_0_1px_rgba(176,37,126,0.15)] relative overflow-hidden">
-              <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "repeating-linear-gradient(45deg, rgba(176,37,126,0.03) 0px, rgba(176,37,126,0.03) 1px, transparent 1px, transparent 12px)" }} />
-              <span className="relative z-10">🌺</span>
-              <div className="absolute bottom-[-20px] right-[-20px] w-[110px] h-[110px] rounded-full bg-green flex flex-col items-center justify-center text-white text-center shadow-green">
-                <span className="font-cormorant font-bold text-[2rem] leading-none">15+</span>
-                <span className="text-[9px] font-bold uppercase tracking-wider opacity-90">Years<br/>Growing</span>
-              </div>
+
+        {/* Timeline — directly below, no gap */}
+        <div className="reveal mt-10 border-l-[1.5px] border-magenta/20 pl-6 space-y-0">
+          {[
+            { year: "2009", text: "Founded in Jind, Haryana with a vision to transform India's floriculture landscape." },
+            { year: "2012", text: "Holland Partnership established with Derck Schipper Bloembollen/Export B.V." },
+            { year: "2015", text: "Pan-India Expansion — operations extended to Uttarakhand, Punjab, North East India." },
+            { year: "2018", text: "1,00,000+ sq. mtr. PQ facility commissioned with strict SOP adherence." },
+            { year: "2024", text: "Today — 1,000+ clients, 30+ countries, a thriving farming community ecosystem." },
+          ].map((item, i) => (
+            <div key={item.year} className="relative py-3" style={{ animationDelay: `${i * 150}ms` }}>
+              <div className="absolute left-[-25px] top-[18px] w-[9px] h-[9px] rounded-full bg-magenta shadow-[0_0_0_3px_rgba(176,37,126,0.2)]" />
+              <div className="font-bebas text-[1.3rem] text-magenta leading-none mb-1">{item.year}</div>
+              <div className="text-[13px] text-[#4a3f35] leading-relaxed">{item.text}</div>
             </div>
-          </div>
-          {/* Timeline */}
-          <div className="mt-8 space-y-0 border-l-[1.5px] border-magenta/18 pl-5">
-            {[
-              { year: "2009", text: "Founded in Jind, Haryana with a vision to transform India's floriculture landscape." },
-              { year: "2012", text: "Holland Partnership established with Derck Schipper Bloembollen/Export B.V." },
-              { year: "2015", text: "Pan-India Expansion — operations extended to Uttarakhand, Punjab, North East India." },
-              { year: "2018", text: "1,00,000+ sq. mtr. PQ facility commissioned with strict SOP adherence." },
-              { year: "2024", text: "Today — 1,000+ clients, 30+ countries, a thriving farming community ecosystem." },
-            ].map((item, i) => (
-              <div key={item.year} className="relative py-3"
-                style={{ animationDelay: `${i * 150}ms` }}>
-                <div className="absolute left-[-21px] top-4 w-[9px] h-[9px] rounded-full bg-magenta shadow-[0_0_0_3px_rgba(176,37,126,0.2)]" />
-                <div className="font-bebas text-[1.3rem] text-magenta leading-none mb-1">{item.year}</div>
-                <div className="text-[13px] text-[#4a3f35] leading-relaxed">{item.text}</div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -112,30 +107,85 @@ export function AboutServices() {
 
 /* ── TEAM ── */
 export function AboutTeam() {
-  const ref = useScrollReveal();
-  const members = [
-    { emoji:"🌱", title:"Founder & Director", role:"Visionary · Agro-Horti Specialist", loc:"Jind, Haryana", desc:"15+ years of expertise in horticulture imports, farmer partnerships, and agri-business development across India.", bg:"from-pink-100 to-rose-50" },
-    { emoji:"🌿", title:"Head of Cultivation", role:"Floriculture Expert · Growing Specialist", loc:"Jind, Haryana", desc:"Expert in floriculture cultivation, polyhouse management, and growing techniques for premium flower bulb varieties.", bg:"from-green-50 to-emerald-50" },
-    { emoji:"🌻", title:"Import & Operations", role:"Import Manager · Quality Control", loc:"Jind, Haryana", desc:"Leading import operations, Holland partner coordination, and quality control for all incoming consignments.", bg:"from-yellow-50 to-amber-50" },
-    { emoji:"🌺", title:"Agronomist & Advisor", role:"Soil Health · Crop Advisory", loc:"Haryana & Punjab", desc:"Specialising in soil health, fertilizer programmes, and crop advisory services for farmers across North India.", bg:"from-rose-100 to-pink-50" },
-    { emoji:"💧", title:"Infrastructure Specialist", role:"Polyhouse · Irrigation Systems", loc:"Haryana", desc:"Specialist for polyhouse design, irrigation systems, and turnkey greenhouse solutions across India.", bg:"from-blue-50 to-indigo-50" },
-    { emoji:"🤝", title:"Farmer Relations", role:"Partnerships · Market Linkage", loc:"Pan India", desc:"Building and maintaining farmer partnerships, market linkages, and contract farming networks.", bg:"from-teal-50 to-cyan-50" },
+  const directors = [
+    {
+      name: "Arjun Singh",
+      role: "Director",
+      tag: "Co-Founder · Agro-Horti Specialist",
+      loc: "Jind, Haryana",
+      desc: "15+ years of expertise in horticulture imports, farmer partnerships, and agri-business development across India.",
+      bg: "from-magenta-pale via-rose-50 to-orange-50",
+      accent: "#b0257e",
+      initials: "AS",
+    },
+    {
+      name: "Renu",
+      role: "Director",
+      tag: "Co-Founder · Operations & Strategy",
+      loc: "Jind, Haryana",
+      desc: "Leading business strategy, client relations, and operational excellence across Red Mirchi Associates' nationwide network.",
+      bg: "from-green-pale via-emerald-50 to-teal-50",
+      accent: "#2d7a3a",
+      initials: "R",
+    },
   ];
+
   return (
-    <section className="py-20 px-[7vw] bg-white" ref={ref}>
-      <SectionHeader tag="The People Behind" title={<>Our <em className="text-magenta not-italic">Expert Team</em></>} desc="A passionate group of horticulturists, agronomists, and farming advocates united by one goal." center />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-        {members.map((m, i) => (
-          <div key={m.title} className="reveal group" style={{ transitionDelay: `${i * 80}ms` }}>
-            <div className={`aspect-[3/4] rounded-xl bg-gradient-to-br ${m.bg} flex items-center justify-center text-[6rem] mb-4 relative overflow-hidden cursor-pointer`}>
-              <span className="transition-transform duration-400 group-hover:scale-105">{m.emoji}</span>
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-ink/70 to-transparent p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-350">
-                <p className="text-white/85 text-[12px] leading-relaxed">{m.desc}</p>
+    <section className="py-20 px-[7vw] bg-white">
+      <div className="text-center mb-12">
+        <div className="section-tag justify-center mb-2">Leadership</div>
+        <h2 className="section-title-serif">
+          Meet Our <em className="text-magenta not-italic">Directors</em>
+        </h2>
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-8 justify-center max-w-2xl mx-auto">
+        {directors.map((d) => (
+          <div
+            key={d.name}
+            className="flex-1 bg-white rounded-2xl border border-magenta/10 overflow-hidden
+              shadow-sm hover:-translate-y-1.5 hover:shadow-[0_12px_40px_rgba(176,37,126,0.12)]
+              hover:border-magenta/25 transition-all duration-300"
+          >
+            {/* Photo area — gradient with initials avatar */}
+            <div className={`aspect-square relative flex items-center justify-center bg-gradient-to-br ${d.bg}`}>
+              {/* Initials circle */}
+              <div
+                className="w-28 h-28 rounded-full flex items-center justify-center
+                  font-cormorant font-bold text-[2.6rem] text-white shadow-lg"
+                style={{ background: `linear-gradient(135deg, ${d.accent}cc, ${d.accent})` }}
+              >
+                {d.initials}
+              </div>
+              {/* Subtle decorative ring */}
+              <div
+                className="absolute inset-0 rounded-none"
+                style={{
+                  backgroundImage: `radial-gradient(circle, ${d.accent}12 1px, transparent 1px)`,
+                  backgroundSize: "28px 28px",
+                }}
+              />
+            </div>
+
+            {/* Top accent bar */}
+            <div className="h-[3px]" style={{ background: `linear-gradient(90deg, ${d.accent}, ${d.accent}55)` }} />
+
+            {/* Info */}
+            <div className="p-6">
+              <h3 className="font-cormorant text-[1.5rem] font-bold text-ink mb-0.5">{d.name}</h3>
+              <div
+                className="text-[11px] font-bold uppercase tracking-[0.08em] mb-1"
+                style={{ color: d.accent }}
+              >
+                {d.role}
+              </div>
+              <div className="text-[11px] text-[#7a6f65] font-medium mb-3">{d.tag}</div>
+              <div className="h-px bg-magenta/8 mb-3" />
+              <p className="text-[13px] text-[#4a3f35] leading-relaxed mb-3">{d.desc}</p>
+              <div className="text-[12px] text-[#7a6f65] flex items-center gap-1.5">
+                <span>📍</span> {d.loc}
               </div>
             </div>
-            <h3 className="font-cormorant text-[1.25rem] font-bold text-ink mb-1">{m.title}</h3>
-            <div className="text-[11px] text-magenta font-bold uppercase tracking-wider mb-0.5">{m.role}</div>
-            <div className="text-[12px] text-[#7a6f65]">📍 {m.loc}</div>
           </div>
         ))}
       </div>
